@@ -2,17 +2,17 @@
 
 @font-face{
   font-family: Centra;
-  src: url('../assets/font/CentraNo2-Bold.ttf');
+  src: url('../assets/font/CentraNo2-Bold.ttf') format('truetype');
   font-weight: 700;
 }
 @font-face{
   font-family: Centra;
-  src: url('../assets/font/CentraNo2-Medium.ttf');
+  src: url('../assets/font/CentraNo2-Medium.ttf') format('truetype');
   font-weight: 500;
 }
 @font-face{
   font-family: Centra;
-  src: url('../assets/font/CentraNo2-Book.ttf');
+  src: url('../assets/font/CentraNo2-Book.ttf') format('truetype');
   font-weight: 400;
 }
 
@@ -38,8 +38,193 @@ body{
 }
 
 h1, h2, h3, h4, h5, h6{ /* Aqui quede*/
-  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
 }
+
+p.danger{
+  color: #ff0000;
+}
+
+p.success{
+  color: #00ff00;
+}
+
+nav.navbar{
+  padding: 18px 0; /* 18px arriba y abajo, 0 a los lados */
+  position: fixed; /* Fijar la barra de navegación */
+  width: 100%;     /* Ancho del 100% */
+  top: 0;          /* Arriba */
+  z-index: 1000;   /* Capa de la barra de navegación */
+  transition: 0.38 ease-in-out; /* Efecto de transición */
+}
+
+nav.navbar.scrolled{
+  padding: 0px 0; /* 0px arriba y abajo, 0 a los lados */
+  background-color: #121212; /* Color de fondo */
+}
+
+nav.navbar .navbar-brand{ /* Logo */
+  width: 9%;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link{ /* Enlaces */
+  font-weight: 400; /* Grosor de la fuente */
+  color: #fff; /* Color de la fuente */
+  letter-spacing: 0.8px;
+  padding: 0 25px; /* 0 arriba y abajo, 25 a los lados */
+  font-size: 18px; /* Tamaño de la fuente */
+  opacity: 0.75; /* Opacidad */
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link:hover,  /* Enlaces al pasar el mouse */
+nav.navbar .navbar-nav .nav-link.navbar-link.active{ /* Enlaces activos */
+  opacity: 1; /* Opacidad */
+}
+
+span.navbar-text{ /* Texto */
+  display: flex;  /* Mostrar como flex */
+  align-items: center; /* Alinear al centro */
+}
+
+.social-icon{ /* Iconos sociales */
+  display: inline-block; /* Mostrar como flex */
+  margin-left: 14px; /* Margen a la izquierda */
+}
+
+.social-icon a{ /* Enlaces de los iconos sociales */
+  width: 42px; /* Ancho */
+  height: 42px; /* Alto */
+  background: rgba(217, 217, 217, 0.1); /* Fondo */
+  display: inline-flex; /* Mostrar como flex */
+  border-radius: 50%; /* Radio del borde */
+  margin-right: 5px; /* Margen a la derecha */
+  align-items: center; /* Alinear al centro */
+  justify-content: center; /* Justificar al centro */
+  line-height: 1; /* Altura de la línea */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Borde */
+}
+
+.social-icon a::before{ /* Antes de los iconos sociales */
+  content: ""; /* Contenido */
+  width: 42px; /* Ancho */
+  height: 42px; /* Alto */
+  position: absolute; /* Posición absoluta */
+  background-color: #fff; /* Color de fondo */
+  border-radius: 50%; /* Radio del borde */
+  transform: scale(0); /* Escala */
+  transition: transform 0.3s; /* Efecto de transición */
+}
+
+.social-icon a:hover::before{ /* Antes de los iconos sociales al pasar el mouse */
+  transform: scale(1); /* Escala */
+}
+
+.social-icon a img{ /* Imagen de los iconos sociales */
+  width: 40%; /* Ancho */
+  z-index: 1; /* Capa */
+  transition: 0.3s; /* Efecto de transición */
+}
+
+.social-icon a:hover img{ /* Imagen de los iconos sociales al pasar el mouse */
+  filter: brightness(0) saturate(100%) invert(0) sepia(7%) saturate(98%) hue-rotate(346deg); /* Filtro */
+}
+
+.navbar-text button{ /* Botón */
+  background-color: transparent; /* Fondo */
+  color: #fff; /* Color de la fuente */
+  font-weight: 700; /* Grosor de la fuente */
+  border: 1px solid #fff; /* Borde */
+  padding: 18px 34px; /* 18px arriba y abajo, 34px a los lados */
+  font-size: 18px; /* Tamaño de la fuente */
+  margin-left: 18px; /* Margen a la izquierda */
+  position: relative; /* Posición relativa */
+  transition: 0.3s ease-in-out; /* Efecto de transición */ 
+}
+
+.navbar-text button span{ /* Texto del botón */
+  z-index: 1; /* Capa */
+}
+
+.navbar-text button::before{ /* Antes del botón */
+  content: ""; /* Contenido */
+  width: 0%; /* Ancho */
+  height: 100%; /* Alto */
+  position: absolute; /* Posición absoluta */
+  top: 0; /* Arriba */
+  left: 0; /* Izquierda */
+  background-color: #fff; /* Color de fondo */
+  z-index: 0; /* Capa */
+  transition: 0.3s ease-in-out; /* Efecto de transición */
+}
+
+.navbar-text button:hover{ /* Botón al pasar el mouse */
+  color: #121212; /* Color de la fuente */
+}
+
+.navbar-text button:hover::before{ /* Antes del botón al pasar el mouse */
+  content: ""; /* Contenido */
+  width: 100%; /* Ancho */
+  height: 100%; /* Alto */
+  position: absolute; /* Posición absoluta */
+}
+
+nav.navbar .navbar-toggler:active ,
+nav.navbar .navbar-toggler:focus {
+  outline: none;
+    box-shadow: none;
+}
+
+nav.navbar .navbar-toggler-icon{ /* Icono del botón */
+  width: 24px; /* Ancho */
+  height: 17px; /* Alto */
+  background-image: none; /* Imagen de fondo */
+  position: relative;
+  border-bottom: 2px solid #fff; /* Borde inferior */
+  transition: all 300ms linear; /* Efecto de transición */
+  top: -2px; /* Arriba */
+}
+
+nav.navbar .navbar-toggler-icon:focus{ /* Icono del botón al enfocar */
+  border-bottom: 2px solid #fff; /* Borde inferior */
+}
+
+nav.navbar .navbar-toggler-icon:after,
+nav.navbar .navbar-toggler-icon:before{ /* Antes y después del icono del botón */
+  content: " "; /* Contenido */
+  width: 24px; /* Ancho */
+  height: 2px; /* Alto */
+  background-color: #fff; /* Color de fondo */
+  position: absolute; /* Posición absoluta */
+  transition: all 300ms linear; /* Efecto de transición */
+  top: 0;
+  left: 0;
+  z-index: 2; /* Capa */
+}
+
+nav.navbar .navbar-toggler-icon:after{
+  top: 8px; /* Arriba */
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after{ /* Icono del botón al expandirse */
+  transform: rotate(45deg); /* Rotar */
+  background-color: #fff;
+  height: 2px; /* Alto */
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before{ /* Antes del icono del botón al expandirse */
+  transform: rotate(-45deg) translateY(0px); /* Rotar */
+  background-color: #fff; /* Color de fondo */
+  height: 2px; /* Alto */
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{ /* Icono del botón al expandirse */
+  border-color: transparent; /* Borde inferior */
+}
+
+
+
 
 
 .App {

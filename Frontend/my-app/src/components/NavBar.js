@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Navbar, Container } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import logo from '../assets/img/alpha-j-svgrepo-com.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
@@ -8,7 +8,7 @@ import navIcon3 from '../assets/img/nav-icon3.svg';
 
 export const NavBar = () => { // This is a functional component
     const [activeLink, setActiveLink] = useState('home');               // Sirve para crear un estado que se utiliza para almacenar el enlace activo
-    const [scolled, setScrolled] = useState(false);                     // sirve para crear un estado que se utiliza para almacenar si el usuario se ha desplazado
+    const [scrolled, setScrolled] = useState(false);                     // sirve para crear un estado que se utiliza para almacenar si el usuario se ha desplazado
 
     useEffect(() => {                                                    // esto es un efecto que se ejecuta cuando el componente se monta
         const onScroll = () => {                                        // sirve para crear una función que se llama cuando el usuario se desplaza
