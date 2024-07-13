@@ -1,3 +1,18 @@
 body {
-    background: linear-gradient(to bottom, black, #050245); 
+    background-image: url("../media/background/3407044.jpg");
+    color: white;
+}
+
+.bg-black{
+    background-color: transparent;
+}
+
+.mi-foto{
+    width: 400px; 
+    height: 500px; 
+}
+
+.card-project:hover{
+    border: 2.2px solid #8300FF ;
+    cursor: pointer;
 }
