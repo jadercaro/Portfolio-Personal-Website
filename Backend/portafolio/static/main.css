@@ -16,3 +16,8 @@ body {
     border: 2.2px solid #8300FF ;
     cursor: pointer;
 }
+
+.btn-project:hover{
+    border: 2.2px solid #8300FF ;
+    cursor: pointer;
+}
