@@ -2,19 +2,29 @@
 
 {% load static %}
 
-<header class="row bg-transparent ">
-    <div class="col-md-4">
-    <img src="{% static 'portfolio/profile-photo.png'%}" alt="" class="mi-foto">
+<header class="row bg-transparent my-auto">
+    <div class="col-md-4 my-6">
+        <img src="{% static 'portfolio/profile-photo.png'%}" alt="" class="mi-foto">
     </div>
     <div class="col-md-8 my-auto">
         <h1 class="display-2">Hi, <strong> I'm Jader </strong></h1>
         <h2>I'm a ML Engineer</h3>
-        <p class="h5"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere laboriosam minus voluptatem, corporis ut quisquam assumenda, eaque placeat ipsum quia asperiores quis eveniet consectetur, itaque nisi corrupti debitis. Laborum, ratione debitis! Neque facilis est provident fuga quae quibusdam dolorum dolore consectetur quos veniam mollitia qui inventore, atque quam eaque deleniti temporibus aliquid corporis quia possimus aspernatur ipsam doloribus distinctio modi. Minus laboriosam aut, repellendus veritatis facilis, omnis repellat fuga distinctio porro possimus magni saepe aspernatur numquam in quasi ipsam quas ipsa, unde optio beatae amet corporis. Numquam perspiciatis nobis officiis expedita cupiditate est? Sint expedita est libero rem nesciunt? Quae.</p>
-        <a href="{% static 'portfolio/jader cv.pdf'%}" class="btn btn-outline-light btn-lg rounded-10 my-3" target="_blank">Download CV</a>
-    </div>    
+            <p class="h5"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere laboriosam minus voluptatem,
+                corporis ut quisquam assumenda, eaque placeat ipsum quia asperiores quis eveniet consectetur, itaque
+                nisi corrupti debitis. Laborum, ratione debitis! Neque facilis est provident fuga quae quibusdam dolorum
+                dolore consectetur quos veniam mollitia qui inventore, atque quam eaque deleniti temporibus aliquid
+                corporis quia possimus aspernatur ipsam doloribus distinctio modi. Minus laboriosam aut, repellendus
+                veritatis facilis, omnis repellat fuga distinctio porro possimus magni saepe aspernatur numquam in quasi
+                ipsam quas ipsa, unde optio beatae amet corporis. Numquam perspiciatis nobis officiis expedita
+                cupiditate est? Sint expedita est libero rem nesciunt? Quae.</p>
+            <a href="{% static 'portfolio/jader cv.pdf'%}" class="btn btn-outline-light btn-lg rounded-10 my-3"
+                target="_blank">Download CV</a>
+
+    </div>
+
 </header>
 
-<div class="row my-4 text-center">
+<div class="row my text-center">
     <h3>My Projects</h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, atque!</p>
 
@@ -22,11 +32,11 @@
 
     <div class="col-md-4 p-4">
         <div class="card bg-black card-project">
-            <img src="{{ project.image.url }}" alt="{{ project.title }}" class="card-img-top"/>
+            <img src="{{ project.image.url }}" alt="{{ project.title }}" class="card-img-top" />
             <div class="card-body">
                 <h2>{{ project.title }}</h2>
                 <p>{{ project.description }}</p>
-                 
+
 
                 {% if project.url %}
                 <a href="{{project.url}}" class="btn btn-outline-light btn-sm" target="_blank">{{project.url}}</a>
@@ -35,13 +45,9 @@
             </div>
         </div>
     </div>
-    
-    
-{% endfor %} 
 
-{% endblock %}
+
+    {% endfor %}
+
+    {% endblock %}
 </div>
-
-
-
-
