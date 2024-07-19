@@ -3,21 +3,29 @@ body {
     color: white;
 }
 
-.bg-black{
+.bg-black {
     background-color: transparent;
 }
 
-.mi-foto{
-    width: 400px; 
-    height: 500px; 
+.mi-foto {
+    width: 400px;
+    height: 500px;
 }
 
-.card-project:hover{
-    border: 2.2px solid #8300FF ;
+.card-project:hover {
+    border: 2.2px solid #8300FF;
     cursor: pointer;
 }
 
-.btn-project:hover{
-    border: 2.2px solid #8300FF ;
+.btn-project:hover {
+    border: 2.2px solid #8300FF;
     cursor: pointer;
+}
+
+.highlight {
+    color: #8300FF;
+    text-shadow: 1px 0px 0px white,
+        0px 1px 0px white,
+        -1px 0px 0px white,
+        0px -1px 0px white;
 }
