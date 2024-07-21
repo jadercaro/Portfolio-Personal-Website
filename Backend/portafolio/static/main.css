@@ -86,3 +86,20 @@ body {
 .button-container .btn {
     margin-right: 15px;
 }
+
+.p-gray {
+    color: #c2c0c0;
+    text-align: justify;
+}
+
+.card-color-white {
+    color: #f6f6f6;
+}
+
+.title {
+    color: white;
+    text-shadow: 1px 0px 0px #8300FF,
+    0px 1px 0px #8300FF,
+    -1px 0px 0px #8300FF,
+    0px -1px 0px #8300FF
+}

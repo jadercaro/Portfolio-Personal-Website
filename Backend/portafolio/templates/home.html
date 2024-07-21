@@ -3,14 +3,14 @@
 {% load static %}
 
 
-<header class="row bg-transparent my-auto py-5">
+<header class="row bg-transparent my-auto py-3">
     <div class="col-md-4 my-5">
         <img src="{% static 'portfolio/profile-photo.png'%}" alt="" class="img-fluid mi-foto">
     </div>
     <div class="col-md-7 my-auto px-4 ">
         <h1 class="display-2 writing py-2">Hi,<strong class="highlight "> I'm Jader </strong></h1>
         <h2 class="py-2">I'm a <strong class="highlight">ML Engineer </strong></h2>
-        <p class="h4"> A machine learning developer specializing in creating predictive models and
+        <p class="h4 p-gray"> A machine learning developer specializing in creating predictive models and
             data-driven solutions for complex problems.</p>
             <div class="button-container">
                 <a href="{% static 'portfolio/jader cv.pdf'%}" class="btn btn-outline-light btn-lg rounded-10 my-3" target="_blank">Download CV</a>
@@ -18,8 +18,14 @@
                 <a href="https://github.com/jadercaro" target="_blank">
                     <i class="fa-brands fa-github fa-2xl px-3" style="color: #c0bfbc;"></i>
                 </a>
-                <a href="https://linkedin.com/in/jadercaro" target="_blank">
+                <a href="https://linkedin.com/in/jader-caro/" target="_blank">
                     <i class="fa-brands fa-linkedin fa-2xl px-2" style="color: #c0bfbc;"></i>
+                </a>
+                <a href="mailto:jjadercaro192@gmail.com">
+                    <i class="fa-solid fa-envelope fa-2xl px-2" style="color: #c0bfbc;"></i>
+                </a>
+                <a href="https://wa.link/bstwcc">
+                    <i class="fa-brands fa-whatsapp fa-2xl px-2" style="color: #c0bfbc;"></i>
                 </a>
             </div>
 
@@ -31,18 +37,35 @@
 
 </header>
 
+<div class= "container-fluid my row text-center my-5">
+    <h1 class='title reveal'>Technologies Stack 💻​</h1>
+    <div class="row my-3">
+        <div class="icon-container reveal">
+            <img src="{% static 'portfolio/Pandas_logo.svg'%}" alt="Pandas Logo" width="150" height="auto">
+            <img src="{% static 'portfolio/NumPy_logo_2020.svg'%}" alt="NumPy Logo" width="150">
+            <img src="{% static 'portfolio/Scikit_learn_logo_small.svg'%}" alt="Scikit-learn Logo" width="130">
+            <img src="{% static 'portfolio/Django_logo.png'%}" alt="Scikit-learn Logo" width="150" class='px-2'>
+            <img src="{% static 'portfolio/MySQL_textlogo.svg'%}" alt="Scikit-learn Logo" width="150" class='px-2'>
+            <img src="{% static 'portfolio/seaborn-seeklogo.svg'%}" alt="Scikit-learn Logo" width="110" class='px-2'>
+        </div>
+    </div>
+</div>
+
 <div class="row my text-center py-5">
-    <h3>My Projects</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, atque!</p>
+    <h1 class='title reveal'>My Projects</h1>
+    <p class="h5 p-gray py-3 reveal">Below are some of the programming projects I have completed.
+        Each of these projects has been an opportunity
+        to apply my skills in machine learning, data analysis, and software development.
+    </p>
 
     {% for project in projects %}
 
     <div class="col-md-4 p-4">
-        <div class="card bg-black card-project">
+        <div class="card bg-black card-project reveal">
             <img src="{{ project.image.url }}" alt="{{ project.title }}" class="card-img-top" />
             <div class="card-body">
-                <h2>{{ project.title }}</h2>
-                <p>{{ project.description }}</p>
+                <h2 class="card-color-white">{{ project.title }}</h2>
+                <p class="p-gray">{{ project.description }}</p>
 
 
                 {% if project.url %}
