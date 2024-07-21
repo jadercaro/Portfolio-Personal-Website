@@ -1,6 +1,12 @@
 body {
     background-image: url("../media/background/3407044.jpg");
     color: #f6f6f6;
+    height:100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
 }
 
 .bg-black {
@@ -8,8 +14,8 @@ body {
 }
 
 .mi-foto {
-    width: 400px;
-    height: 500px;
+    width: 100%; /* podemos cambiar a 100%*/
+    height: auto; /* podemos cambiar a Auto*/
 }
 
 .card-project:hover {
@@ -34,10 +40,10 @@ body {
     display:block;
     white-space: nowrap;
     border-right: 4px solid;
-     width: 10ch;
+     width: 11ch;
 
-     animation: typing 3s steps(10),
-     blink .5s step-end alternate;
+     animation: typing 3s steps(11),
+     blink .5s step-end infinite alternate;
      overflow: hidden;
 
 }
@@ -53,4 +59,30 @@ body {
 .vector{
     width: 280px;
     height: 280px;
+}
+
+/* Background para ancho máximo de la pantalla física */
+@media only screen and (max-device-width: 767px) {
+body {
+    background-image: url("../media/background/3407044.jpg");
+    color: #FFF;
+}
+}
+/* Background para ancho máximo del navegador */
+@media only screen and (max-width: 767px) {
+body {
+    background-image: url("../media/background/3407044.jpg");
+    color: #FFF;
+}
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+.button-container a {
+    text-decoration: none;
+}
+.button-container .btn {
+    margin-right: 15px;
 }
