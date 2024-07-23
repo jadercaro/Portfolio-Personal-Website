@@ -21,10 +21,10 @@
                 <a href="https://linkedin.com/in/jader-caro/" target="_blank">
                     <i class="fa-brands fa-linkedin fa-2xl px-2" style="color: #c0bfbc;"></i>
                 </a>
-                <a href="mailto:jjadercaro192@gmail.com">
+                <a href="mailto:jjadercaro192@gmail.com" target="_blank">
                     <i class="fa-solid fa-envelope fa-2xl px-2" style="color: #c0bfbc;"></i>
                 </a>
-                <a href="https://wa.link/bstwcc">
+                <a href="https://wa.link/bstwcc" target="_blank">
                     <i class="fa-brands fa-whatsapp fa-2xl px-2" style="color: #c0bfbc;"></i>
                 </a>
             </div>
@@ -38,7 +38,7 @@
 </header>
 
 <div class= "container-fluid my row text-center my-5">
-    <h1 class='title reveal'>Technologies Stack 💻​</h1>
+    <h1 class='title reveal'>Technology Stack 💻​</h1>
     <div class="row my-3">
         <div class="icon-container reveal">
             <img src="{% static 'portfolio/Pandas_logo.svg'%}" alt="Pandas Logo" width="150" height="auto">
@@ -69,7 +69,7 @@
 
 
                 {% if project.url %}
-                <a href="{{project.url}}" class="btn btn-outline-light btn-sm" target="_blank">{{project.url}}</a>
+                <a href="{{project.url}}" class="btn btn-outline-light btn-sm" target="_blank">{{project.url |truncatechars:43}}</a>
                 {% endif %}
 
             </div>
