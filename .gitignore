@@ -69,3 +69,10 @@ coverage.xml
 # System files
 .DS_Store
 Thumbs.db
+
+# Python virtual env
+venv/
+env/
+jader_venv/
+
+
