@@ -1,0 +1,105 @@
+body {
+    background-image: url("../staticfiles/portfolio/3407044.b2587f7a3151.b2587f7a3151.jpg");
+    color: #f6f6f6;
+    height:100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.bg-black {
+    background-color: transparent;
+}
+
+.mi-foto {
+    width: 100%; /* podemos cambiar a 100%*/
+    height: auto; /* podemos cambiar a Auto*/
+}
+
+.card-project:hover {
+    border: 2.2px solid #8300FF;
+    cursor: pointer;
+}
+
+.btn-project:hover {
+    border: 2.2px solid #8300FF;
+    cursor: pointer;
+}
+
+.highlight {
+    color: #8300FF;
+    text-shadow: 1px 0px 0px white,
+        0px 1px 0px gray,
+        -1px 0px 0px gray,
+        0px -1px 0px gray
+}
+
+.writing{
+    display:block;
+    white-space: nowrap;
+    border-right: 4px solid;
+     width: 11ch;
+
+     animation: typing 3s steps(11),
+     blink .5s step-end infinite alternate;
+     overflow: hidden;
+
+}
+
+@keyframes typing {
+    from { width: 0;}
+}
+
+@keyframes blink {
+    50% {border-color: transparent;}
+}
+
+.vector{
+    width: 280px;
+    height: 280px;
+}
+
+/* Background para ancho máximo de la pantalla física */
+@media only screen and (max-device-width: 767px) {
+body {
+    background-image: url("../staticfiles/portfolio/3407044.b2587f7a3151.b2587f7a3151.jpg");
+    color: #FFF;
+}
+}
+/* Background para ancho máximo del navegador */
+@media only screen and (max-width: 767px) {
+body {
+    background-image: url("../staticfiles/portfolio/3407044.b2587f7a3151.b2587f7a3151.jpg");
+    color: #FFF;
+}
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
+.button-container a {
+    text-decoration: none;
+}
+.button-container .btn {
+    margin-right: 15px;
+}
+
+.p-gray {
+    color: #c2c0c0;
+    text-align: justify;
+}
+
+.card-color-white {
+    color: #f6f6f6;
+}
+
+.title {
+    color: white;
+    text-shadow: 1px 0px 0px #8300FF,
+    0px 1px 0px #8300FF,
+    -1px 0px 0px #8300FF,
+    0px -1px 0px #8300FF
+}
