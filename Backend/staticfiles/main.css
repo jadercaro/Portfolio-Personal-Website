@@ -1,5 +1,5 @@
 body {
-    background-image: url("../media/background/3407044.jpg");
+    background-image: url("/static/portfolio/3407044.jpg");
     color: #f6f6f6;
     height:100vh;
     background-position: center center;
@@ -64,14 +64,14 @@ body {
 /* Background para ancho máximo de la pantalla física */
 @media only screen and (max-device-width: 767px) {
 body {
-    background-image: url("../media/background/3407044.jpg");
+    background-image: url("/static/portfolio/3407044.jpg");
     color: #FFF;
 }
 }
 /* Background para ancho máximo del navegador */
 @media only screen and (max-width: 767px) {
 body {
-    background-image: url("../media/background/3407044.jpg");
+    background-image: url("/static/portfolio/3407044.jpg");
     color: #FFF;
 }
 }
